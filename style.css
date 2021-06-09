@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle, rgba(174, 238, 188, 0.884) 7%, rgba(148, 233, 233, 0.877) 100%), url(Images/bg-img.jpeg);
+    display: grid;
+    place-items: center;
+    
+}
+
+.container{
+    max-width: 850px;
+    margin: auto;
+    border:2px solid rgba(25, 53, 31, 0.274) ;
+    border-radius: 15px;
+    
+}
+
+
+.current-img img, .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    opacity: .6;
+}
+
+.fade{
+    opacity: 0;
+    animation:fade 0.5s ease-in 1 forwards ;
+}
+
+@keyframes fade {
+    to{opacity: 1;}
+}
